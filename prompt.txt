@@ -1,0 +1,7 @@
+Fix the implementation in sources/arb.sv.
+
+The arbiter must grant access to one requester at a time using a fixed priority scheme (req[3] is highest, req[0] is lowest).
+
+The design should be sequential (registered output), updating the grant signal on the rising edge of the clock.
+
+Ensure the grant is one-hot (only one bit high) or all zeros if no requests are active.
